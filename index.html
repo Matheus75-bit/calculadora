@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Fórmulas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+   <h1>Calculadora de Fórmulas</h1> 
+   <p> Quando for calcular alguma das fórmulas, insira os valores corretamente nas caixas seguindo a ordem de aparição dos números na fórmula para que obtenha o resultado correto.</p>
+<div class="valores">
+     Primeiro Número<br>
+    <input id="n1" type="number"/><br><br>
+    Segundo Número<br>
+    <input id="n2" type="number"/><br><br>
+    Terceiro Número<br>
+    <input id="n3" type="number"/><br>
+
+    <p>O Resultado É: <span id=resultado></span></p>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button><br><br>
+    <button onclick="quadrado()">Área do Quadrado</button> Fórmula utilizada: l²<br>
+ 
+    <button onclick="retangulo()">Área do Retângulo</button> Fórmula utilizada: b.h<br>
+ 
+    <button onclick="trapezio()">Trapézio</button> Fórmula utilizada: (B+b).h/2<br> 
+ 
+    <button onclick="losangulo()">Área do Losango</button> Fórmula utilizada: D.d/2<br>
+ 
+    <button onclick="triangulo1()">Área do Triângulo</button> Fórmula utilizada: b.h/2<br>
+ 
+    <button onclick="trangulo2()">Área do Triângulo Equilátero</button> Fórmula utilizada: l²√3/4<br>
+ 
+    <button onclick="circulo()">Círculo</button> Fórmula utilizada: π.r²<br>
+ 
+    <button onclick="circunferencia()">Circunferência</button> Fórmula utilizada: 2.π.r<br>
+ 
+    <button onclick="seno()">Seno do Ângulo</button>  Fórmula utilizada: co/h<br>
+ 
+    <button onclick="cosseno()">Cosseno do Ângulo</button> Fórmula utilizada: ca/h<br>
+ 
+    <button onclick="tangente()">Tangente do Ângulo</button> Fórmula utilizada: co/ca<br>
+ 
+    <button onclick="radiano()">Graus em Radianos</button> Fórmula utilizada: α.π/180<br>
+ 
+    <button onclick="pitagoras()">Teorema de Pitágoras</button> Fórmula utilizada: a²=b²+c²<br>
+</div>
+</center>
+   <script>
+    var n1 = document.querySelector('#n1')
+    var n2 = document.querySelector('#n2')
+    var n3 = document.querySelector('#n3')
+    var resultado = document.querySelector('#resultado')
+    function somar(){
+        resultado.innerHTML = parseFloat(n1.value) + parseFloat(n2.value)
+    }
+    function subtrair(){
+        resultado.innerHTML = parseFloat(n1.value) - parseFloat(n2.value)
+    }
+    function multiplicar(){
+        resultado.innerHTML = parseFloat(n1.value) * parseFloat(n2.value)
+    }
+    function dividir(){
+        resultado.innerHTML = parseFloat(n1.value) / parseFloat(n2.value)
+    }
+    function quadrado(){
+        resultado.innerHTML = parseFloat(n1.value) * parseFloat(n1.value)
+    }
+    function retangulo(){
+        resultado.innerHTML = parseFloat(n1.value) * parseFloat(n2.value)
+    }
+    function trapezio(){
+        resultado.innerHTML = (parseFloat(n1.value) + parseFloat(n2.value)) * parseFloat(n3.value) / 2
+    }
+    function losango(){
+        resultado.innerHTML = parseFloat(n1.value) * parseFloat(n2.value) / 2
+    }
+    function triangulo1(){
+        resultado.innerHTML = parseFloat(n1.value) * parseFloat(n2.value) / 2
+    }
+    function trangulo2(){
+        resultado.innerHTML = parseFloat(n1.value) * parseFloat(n1.value) * Math.sqrt(3) / 4
+    }
+    function circulo(){
+        resultado.innerHTML = parseFloat(n1.value) * parseFloat(n1.value) * Math.PI 
+    }
+    function circunferencia(){
+        resultado.innerHTML = 2 * Math.PI * parseFloat(n1.value)
+    }
+    function seno(){
+        resultado.innerHTML = parseFloat(n1.value) / parseFloat(n2.value)
+    }
+    function cosseno(){
+        resultado.innerHTML = parseFloat(n1.value) / parseFloat(n2.value)
+    }
+    function tangente(){
+        resultado.innerHTML = parseFloat(n1.value) / parseFloat(n2.value)
+    }
+    function radiano(){
+        resultado.innerHTML = parseFloat(n1.value) * Math.PI / 180
+    }
+    function pitagoras(){
+        resultado.innerHTML = Math.sqrt(Math.imul(n1.value,n1.value) + Math.imul(n2.value,n2.value))
+    }
+   </script>
+</body>
+</html>
